@@ -1,11 +1,11 @@
 package by.bsuir.electricalAppliances;
 
-import builder.Director;
-import builder.EconomyBuilder;
-import builder.UsualBuilder;
+import by.bsuir.electricalAppliances.builder.Director;
+import by.bsuir.electricalAppliances.builder.EconomyBuilder;
+import by.bsuir.electricalAppliances.builder.UsualBuilder;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.logic.FlatLogic;
+import by.bsuir.electricalAppliances.modelLogic.FlatLogic;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.SimpleLayout;
 
