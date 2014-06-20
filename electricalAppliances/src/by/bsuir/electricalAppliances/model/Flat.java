@@ -57,17 +57,23 @@ public class Flat {
     }
 
    
-//    @Override
-//    public String toString() {
-//        Iterator<ElectricalAppliance> iter = electricalAppliances.iterator();
-//        String result = "";
-//        while (iter.hasNext()) {
-//            ElectricalAppliance item = iter.next();
-//            result += item + "" + item.getMaxPowerConsumption();
-//            System.out.println("power = ");
-//        }
-//        return result;
-//    }
+    @Override
+    public String toString() {
+        Iterator<ElectricalAppliance> iter = flatirons.iterator();
+        String result = "";
+        while (iter.hasNext()) {
+            ElectricalAppliance item = iter.next();
+            result += item;
+        }
+
+        iter = fridges.iterator();
+        while (iter.hasNext()) {
+            ElectricalAppliance item = iter.next();
+            result += item;
+        }
+        
+        return result;
+    }
 
 
 }

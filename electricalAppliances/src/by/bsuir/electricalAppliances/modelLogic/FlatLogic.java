@@ -4,12 +4,9 @@
  */
 package by.bsuir.electricalAppliances.modelLogic;
 
-import java.util.Collections;
 import java.util.Iterator;
 import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
 import by.bsuir.electricalAppliances.model.Flat;
-import by.bsuir.electricalAppliances.model.Flatiron;
-import by.bsuir.electricalAppliances.model.Fridge;
 
 /**
  *
@@ -17,13 +14,7 @@ import by.bsuir.electricalAppliances.model.Fridge;
  */
 public class FlatLogic {
 
-    private Flat flat;
-
-    public void setFlat(Flat flat) {
-        this.flat = flat;
-    }
-
-    public int calculateTotalPower() {
+    public int calculateTotalPower(Flat flat) {
         Iterator<ElectricalAppliance> iterFl = flat.getFlatirons().iterator();
         int total = 0;
         while (iterFl.hasNext()) {
@@ -39,7 +30,7 @@ public class FlatLogic {
         return total;
     }
 
-    public boolean switchOnFlatiron() {
+    public boolean switchOnFlatiron(Flat flat) {
         Iterator<ElectricalAppliance> iterFl = flat.getFlatirons().iterator();
         boolean isSwitchedOn = false;
         while (iterFl.hasNext() && !isSwitchedOn) {
@@ -52,7 +43,7 @@ public class FlatLogic {
         return isSwitchedOn;
     }
 
-    public boolean switchOnFridge() {
+    public boolean switchOnFridge(Flat flat) {
         Iterator<ElectricalAppliance> iterFr = flat.getFridges().iterator();
         boolean isSwitchedOn = false;
         while (iterFr.hasNext() && !isSwitchedOn) {
@@ -63,19 +54,6 @@ public class FlatLogic {
             }
         }
         return isSwitchedOn;
-    }
-
-    public void sortEachCategoryByPowerASC() {
-        sortFlatironsByPowerASC();
-        sortFridgesByPowerASC();
-    }
-
-    public void sortFlatironsByPowerASC() {
-        Collections.sort(flat.getFlatirons());
-    }
-
-    public void sortFridgesByPowerASC() {
-        Collections.sort(flat.getFridges());
     }
     
 }

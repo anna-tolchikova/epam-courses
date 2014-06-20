@@ -55,7 +55,7 @@ public abstract class ElectricalAppliance implements Comparable {
 
     @Override
     public String toString() {
-        return this.getClass().getName() + " isSwitchedOn = " + this.isSwitchedOn + " maxPowerConsumption = " + this.maxPowerConsumption;
+        return " isSwitchedOn = " + this.isSwitchedOn + " maxPowerConsumption = " + this.maxPowerConsumption;
     }
 
 }

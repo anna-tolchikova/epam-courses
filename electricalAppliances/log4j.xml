@@ -3,12 +3,22 @@
 <log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
     <appender name="TxtAppender" class="org.apache.log4j.FileAppender">
         <param name="File" value="log.txt" />
-        <layout class="org.apache.log4j.SimpleLayout"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="aa %p %c: %m%n"/>
+        </layout>
+    </appender>
+    <appender name="ConsAppender" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="aa %p %c: %m%n"/>
+        </layout>
     </appender>
     <logger name="app6">
         <level value="debug" />
     </logger>
     <root>
         <appender-ref ref="TxtAppender" />
+        <appender-ref ref="ConsAppender" />
     </root>
 </log4j:configuration>
+

@@ -127,6 +127,6 @@ public class Fridge extends ElectricalAppliance {
 
     @Override
     public String toString() {
-        return super.toString() + " ConsumptionClass = " + this.consumptionClass;
+        return super.toString() + " ConsumptionClass = " + this.consumptionClass + "\n";
     }
 }
