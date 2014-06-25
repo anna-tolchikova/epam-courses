@@ -1,0 +1,7 @@
+aa INFO by.bsuir.electricalappliances.model.Fridge: A A
+aa INFO by.bsuir.electricalappliances.model.Fridge: A
+aa INFO by.bsuir.electricalappliances.model.Fridge: 
+12:41:03,520  INFO Fridge: 
+12:41:35,736  INFO Fridge: A
+12:46:45,719  INFO Fridge: B
+12:47:14,899  INFO Fridge: B

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/Main.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/builder/ConcreteBuilder.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/exceptions/LogicalException.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/builder/Director.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/builder/BaseBuilder.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/model/Flat.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/model/Flatiron.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/factoryMethod/Creator.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/factoryMethod/FlatironCreator.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/factoryMethod/FridgeCreator.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/exceptions/TechnicalException.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/model/Fridge.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/modelAbstractions/ElectricalAppliance.java</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/log4j.xml</file>
+        <file>file:/D:/Мои%20документы/!EPAM/electrical_appliances/electricalappliances/src/by/bsuir/electricalappliances/modelLogic/FlatSearch.java</file>
+    </open-files>
+</project-private>
