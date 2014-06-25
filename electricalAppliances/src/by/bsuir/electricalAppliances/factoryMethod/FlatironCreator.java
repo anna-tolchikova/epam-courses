@@ -1,12 +1,11 @@
-package by.bsuir.electricalAppliances.factoryMethod;
+package by.bsuir.electricalappliances.factoryMethod;
 
-import by.bsuir.electricalAppliances.model.Flatiron;
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.model.Flatiron;
 
 public class FlatironCreator extends Creator {
 
     @Override
-    public ElectricalAppliance factoryMethod() {
+    public Flatiron factoryMethod() {
         return new Flatiron();
     }
 }

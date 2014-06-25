@@ -1,10 +1,35 @@
-package by.bsuir.electricalAppliances.model;
+package by.bsuir.electricalappliances.model;
 
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 
 public class Flatiron extends ElectricalAppliance {
 
     private String soleplate;   // материал подошвы утюга
+
+    public Flatiron() {
+        super();
+    }
+
+    public Flatiron(String soleplate) {
+        super();
+        this.soleplate = soleplate;
+    }
+
+    public Flatiron(boolean isSwithedOn, String soleplate) {
+        super(isSwithedOn);
+        this.soleplate = soleplate;
+    }
+
+    public Flatiron(boolean isSwithedOn, int maxPowerConsumption, String soleplate) {
+        super(isSwithedOn, maxPowerConsumption);
+        this.soleplate = soleplate;
+    }
+
+    public Flatiron(boolean isSwithedOn, int maxPowerConsumption, String soleplate, String producer) {
+        super(isSwithedOn, maxPowerConsumption, producer);
+        this.soleplate = soleplate;
+    }
+
 
     public String getSoleplate() {
         return soleplate;

@@ -2,11 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package by.bsuir.electricalAppliances.modelLogic;
+package by.bsuir.electricalappliances.modelLogic;
 
 import java.util.Iterator;
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
-import by.bsuir.electricalAppliances.model.Flat;
+import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.model.Flat;
+import by.bsuir.electricalappliances.model.Flatiron;
+import by.bsuir.electricalappliances.model.Fridge;
 
 /**
  *
@@ -15,27 +17,21 @@ import by.bsuir.electricalAppliances.model.Flat;
 public class FlatLogic {
 
     public int calculateTotalPower(Flat flat) {
-        Iterator<ElectricalAppliance> iterFl = flat.getFlatirons().iterator();
+        Iterator<ElectricalAppliance> iterFl = flat.getElectricalAppliances().iterator();
         int total = 0;
         while (iterFl.hasNext()) {
             ElectricalAppliance item = iterFl.next();
-            total += item.getCurrentPowerConsumption();
-        }
-
-        Iterator<ElectricalAppliance> iterFr = flat.getFridges().iterator();
-        while (iterFr.hasNext()) {
-            ElectricalAppliance item = iterFr.next();
             total += item.getCurrentPowerConsumption();
         }
         return total;
     }
 
     public boolean switchOnFlatiron(Flat flat) {
-        Iterator<ElectricalAppliance> iterFl = flat.getFlatirons().iterator();
+        Iterator<ElectricalAppliance> iter = flat.getElectricalAppliances().iterator();
         boolean isSwitchedOn = false;
-        while (iterFl.hasNext() && !isSwitchedOn) {
-            ElectricalAppliance item = iterFl.next();
-            if (!item.isSwitchedOn()) {
+        while (iter.hasNext() && !isSwitchedOn) {
+            ElectricalAppliance item = iter.next();
+            if (!item.isSwitchedOn() && item instanceof Flatiron ) {
                 item.setSwitchedOn(true);
                 isSwitchedOn = true;
             }
@@ -44,11 +40,11 @@ public class FlatLogic {
     }
 
     public boolean switchOnFridge(Flat flat) {
-        Iterator<ElectricalAppliance> iterFr = flat.getFridges().iterator();
+        Iterator<ElectricalAppliance> iter = flat.getElectricalAppliances().iterator();
         boolean isSwitchedOn = false;
-        while (iterFr.hasNext() && !isSwitchedOn) {
-            ElectricalAppliance item = iterFr.next();
-            if (!item.isSwitchedOn()) {
+        while (iter.hasNext() && !isSwitchedOn) {
+            ElectricalAppliance item = iter.next();
+            if (!item.isSwitchedOn() && item instanceof Fridge) {
                 item.setSwitchedOn(true);
                 isSwitchedOn = true;
             }

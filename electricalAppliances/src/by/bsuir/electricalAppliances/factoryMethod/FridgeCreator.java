@@ -1,12 +1,11 @@
-package by.bsuir.electricalAppliances.factoryMethod;
+package by.bsuir.electricalappliances.factoryMethod;
 
-import by.bsuir.electricalAppliances.model.Fridge;
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.model.Fridge;
 
 public class FridgeCreator extends Creator {
 
     @Override
-    public ElectricalAppliance factoryMethod() {
+    public Fridge factoryMethod() {
         return new Fridge();
     }
 }

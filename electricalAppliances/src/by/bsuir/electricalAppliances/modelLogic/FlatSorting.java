@@ -1,20 +1,13 @@
-package by.bsuir.electricalAppliances.modelLogic;
+package by.bsuir.electricalappliances.modelLogic;
 
-import by.bsuir.electricalAppliances.model.Flat;
+import by.bsuir.electricalappliances.model.Flat;
 import java.util.Collections;
 
 public class FlatSorting {
 
-    public void sortEachCategoryByPowerASC(Flat flat) {
-        sortFlatironsByPowerASC(flat);
-        sortFridgesByPowerASC(flat);
+    public void sortAppliancesByPowerASC(Flat flat) {
+        Collections.sort(flat.getElectricalAppliances());
     }
 
-    public void sortFlatironsByPowerASC(Flat flat) {
-        Collections.sort(flat.getFlatirons());
-    }
 
-    public void sortFridgesByPowerASC(Flat flat) {
-        Collections.sort(flat.getFridges());
-    }
 }

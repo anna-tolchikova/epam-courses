@@ -1,34 +1,26 @@
-package by.bsuir.electricalAppliances.model;
+package by.bsuir.electricalappliances.model;
 
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Flat {
     
-    ArrayList<ElectricalAppliance> flatirons;
-    ArrayList<ElectricalAppliance> fridges;
+    private ArrayList<ElectricalAppliance> electricalAppliances;
 
     public Flat(){
-        this.flatirons = new ArrayList<ElectricalAppliance>() ;
-        this.fridges = new ArrayList<ElectricalAppliance>() ;
+        electricalAppliances = new ArrayList<ElectricalAppliance>() ;
     }
 
-    public ArrayList<ElectricalAppliance> getFlatirons() {
-        return flatirons;
+    public ArrayList<ElectricalAppliance> getElectricalAppliances() {
+        return electricalAppliances;
     }
 
-    public ArrayList<ElectricalAppliance> getFridges() {
-        return fridges;
+    public void addElectricalAppliance(ElectricalAppliance newObject){
+        electricalAppliances.add(newObject);
+
     }
 
-    public void addFlatiron(ElectricalAppliance newObject){
-        this.flatirons.add(newObject);
-    }
-
-    public void addFridge(ElectricalAppliance newObject){
-        this.fridges.add(newObject);
-    }
 
     @Override
     public boolean equals(Object obj) {
@@ -39,10 +31,7 @@ public class Flat {
             return false;
         }
         final Flat other = (Flat) obj;
-        if (this.flatirons != other.flatirons && (this.flatirons == null || !this.flatirons.equals(other.flatirons))) {
-            return false;
-        }
-        if (this.fridges != other.fridges && (this.fridges == null || !this.fridges.equals(other.fridges))) {
+        if (this.electricalAppliances != other.electricalAppliances && (this.electricalAppliances == null || !this.electricalAppliances.equals(other.electricalAppliances))) {
             return false;
         }
         return true;
@@ -50,30 +39,20 @@ public class Flat {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 37 * hash + (this.flatirons != null ? this.flatirons.hashCode() : 0);
-        hash = 37 * hash + (this.fridges != null ? this.fridges.hashCode() : 0);
+        int hash = 3;
+        hash = 97 * hash + (this.electricalAppliances != null ? this.electricalAppliances.hashCode() : 0);
         return hash;
     }
 
    
     @Override
     public String toString() {
-        Iterator<ElectricalAppliance> iter = flatirons.iterator();
+        Iterator<ElectricalAppliance> iter = electricalAppliances.iterator();
         String result = "";
         while (iter.hasNext()) {
             ElectricalAppliance item = iter.next();
             result += item;
         }
-
-        iter = fridges.iterator();
-        while (iter.hasNext()) {
-            ElectricalAppliance item = iter.next();
-            result += item;
-        }
-        
         return result;
     }
-
-
 }

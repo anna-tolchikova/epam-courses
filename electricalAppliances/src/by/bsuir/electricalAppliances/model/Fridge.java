@@ -1,13 +1,16 @@
-package by.bsuir.electricalAppliances.model;
+package by.bsuir.electricalappliances.model;
 
-import by.bsuir.electricalAppliances.exceptions.LogicalException;
-import by.bsuir.electricalAppliances.exceptions.TechnicalException;
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.exceptions.LogicalException;
+import by.bsuir.electricalappliances.exceptions.TechnicalException;
+import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.xml.DOMConfigurator;
 
 public class Fridge extends ElectricalAppliance {
 
+    static Logger log = Logger.getLogger(Fridge.class.getName());
     private String consumptionClass;
 
     enum PowerConsumptionClass {
@@ -70,38 +73,47 @@ public class Fridge extends ElectricalAppliance {
         this.consumptionClass = consumptionClass;
     }
 
+    public Fridge(boolean isSwithedOn, int maxPowerConsumption, String consumptionClass, String producer) {
+        super(isSwithedOn, maxPowerConsumption, producer);
+        this.consumptionClass = consumptionClass;
+    }
+
     public String getConsumptionClass() {
         return consumptionClass;
     }
 
-    public void setConsumptionClass(String consumptionClass) throws TechnicalException, LogicalException {
+    public void setConsumptionClass(String consumptionClass) throws TechnicalException {
         try {
             PowerConsumptionClass className = PowerConsumptionClass.valueOf(consumptionClass.toUpperCase());
             if (this.maxPowerConsumption != 0) // если уже установлена мощность - определяем соответствие классу потребляемой мощности
-                if (!className.checkPowerConsumptionByClass(this.maxPowerConsumption))
+            {
+                if (!className.checkPowerConsumptionByClass(this.maxPowerConsumption)) {
                     throw new LogicalException("power consumption class does not suit max power consumption");
+                }
+            }
             this.consumptionClass = consumptionClass;
-        } 
-        catch (IllegalArgumentException ex) {
-            // записать в логгер уровень эррор  -
-            throw new TechnicalException(ex, "no such power consumption class");
+
+        } catch (IllegalArgumentException ex) {
+            throw new TechnicalException(consumptionClass + " - there is no such power consumption class ", ex);
+        } catch (LogicalException ex) {
+            log.log(Level.SEVERE, ex.getMessage());
         }
     }
 
     @Override
     public void setMaxPowerConsumption(int maxPowerConsumption) {
-        PowerConsumptionClass className = PowerConsumptionClass.valueOf(this.consumptionClass.toUpperCase());
-        if (this.consumptionClass != null)
-            if (!className.checkPowerConsumptionByClass(maxPowerConsumption))
-                try {
-            throw new LogicalException("max power consumption does not suit power consumption class");
+        try {
+            if (this.consumptionClass != null) {
+                PowerConsumptionClass className = PowerConsumptionClass.valueOf(this.consumptionClass.toUpperCase());
+                if (!className.checkPowerConsumptionByClass(maxPowerConsumption)) {
+                    throw new LogicalException("max power consumption = " + maxPowerConsumption + " does not suit power consumption class" + this.consumptionClass);
+                }
+            }
+            this.maxPowerConsumption = maxPowerConsumption;
         } catch (LogicalException ex) {
-
-            //Logger.getLogger(Fridge.class.getName()).log(Level.SEVERE, null, ex);
+            log.log(Level.SEVERE, ex.getMessage());
         }
     }
-
-
 
     @Override
     public boolean equals(Object obj) {

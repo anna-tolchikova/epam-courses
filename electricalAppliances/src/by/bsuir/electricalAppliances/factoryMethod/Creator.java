@@ -1,6 +1,6 @@
-package by.bsuir.electricalAppliances.factoryMethod;
+package by.bsuir.electricalappliances.factoryMethod;
 
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 
 public abstract class Creator {
 

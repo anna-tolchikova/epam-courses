@@ -1,13 +1,16 @@
-package by.bsuir.electricalAppliances.exceptions;
+package by.bsuir.electricalappliances.exceptions;
 
-public class TechnicalException  extends Exception{
+public class TechnicalException extends Exception {
 
-    public TechnicalException (Exception exc, String message) {
-
+    public TechnicalException() {
+        super();
     }
 
-    public TechnicalException (String error) {
-// когда инициализируем класс холодильника несуществующим
+    public TechnicalException(String message) {
+        super(message);
     }
 
+    public TechnicalException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

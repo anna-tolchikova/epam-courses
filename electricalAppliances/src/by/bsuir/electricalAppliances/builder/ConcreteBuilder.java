@@ -1,26 +1,17 @@
-package by.bsuir.electricalAppliances.builder;
+package by.bsuir.electricalappliances.builder;
 
-import by.bsuir.electricalAppliances.model.Flatiron;
-import by.bsuir.electricalAppliances.model.Fridge;
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ConcreteBuilder extends BaseBuilder{
 
-    public void addFlatirons (ArrayList<ElectricalAppliance> flatirons) {
-        Iterator<ElectricalAppliance> iter = flatirons.iterator();
+    public void addElectricalAppliances (ArrayList<ElectricalAppliance> electricalAppliances) {
+        Iterator<ElectricalAppliance> iter = electricalAppliances.iterator();
         while (iter.hasNext()) {
-            ElectricalAppliance flatiron = iter.next();
-            flat.addFlatiron(flatiron);
+            ElectricalAppliance electricalAppliance = iter.next();
+            flat.addElectricalAppliance(electricalAppliance);
         }
     }
 
-    public void addFridges (ArrayList<ElectricalAppliance> fridges) {
-        Iterator<ElectricalAppliance> iter = fridges.iterator();
-        while (iter.hasNext()) {
-            ElectricalAppliance fridge = iter.next();
-            flat.addFridge(fridge);
-        }
-    }
 }

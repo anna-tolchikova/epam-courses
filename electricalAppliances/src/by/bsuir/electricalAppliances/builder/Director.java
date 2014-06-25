@@ -1,9 +1,7 @@
-package by.bsuir.electricalAppliances.builder;
+package by.bsuir.electricalappliances.builder;
 
-import by.bsuir.electricalAppliances.model.Flat;
-import by.bsuir.electricalAppliances.model.Flatiron;
-import by.bsuir.electricalAppliances.model.Fridge;
-import by.bsuir.electricalAppliances.modelAbstractions.ElectricalAppliance;
+import by.bsuir.electricalappliances.model.Flat;
+import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 import java.util.ArrayList;
 
 public class Director {
@@ -19,8 +17,8 @@ public class Director {
 
     public void constructFlat(ArrayList<ElectricalAppliance> flatirons, ArrayList<ElectricalAppliance> fridges) {
         flatBuilder.createNewFlat();
-        flatBuilder.addFlatirons(flatirons);
-        flatBuilder.addFridges(fridges);
+        flatBuilder.addElectricalAppliances(flatirons);
+        flatBuilder.addElectricalAppliances(fridges);
     }
 
 }
