@@ -5,8 +5,6 @@ import by.bsuir.electricalappliances.exceptions.TechnicalException;
 import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.xml.DOMConfigurator;
 
 public class Fridge extends ElectricalAppliance {
 
@@ -18,39 +16,49 @@ public class Fridge extends ElectricalAppliance {
         A, B, C, D, E, F, G;
 
         public boolean checkPowerConsumptionByClass(int powerConsumption) {
+            boolean result = false;
             switch (this) {
                 case A:
                     if (powerConsumption <= 550) {
-                        return true;
+                        result = true;
                     }
+                    break;
                 case B:
                     if (powerConsumption > 550 && powerConsumption <= 750) {
-                        return true;
+                        result = true;
                     }
+                    break;
                 case C:
                     if (powerConsumption > 750 && powerConsumption <= 900) {
-                        return true;
+                        result = true;
                     }
+                    break;
                 case D:
                     if (powerConsumption > 900 && powerConsumption <= 1000) {
-                        return true;
+                        result = true;
                     }
+                    break;
                 case E:
                     if (powerConsumption > 1000 && powerConsumption <= 1100) {
-                        return true;
+                        result = true;
                     }
+                    break;
                 case F:
                     if (powerConsumption > 1100 && powerConsumption <= 1250) {
-                        return true;
+                        result = true;
                     }
+                    break;
                 case G:
                     if (powerConsumption > 1250) {
-                        return true;
+                        result = true;
                     }
+                    break;
                 default:
-                    return false;
+                    result = false;
+                    break;
 
             }
+            return result;
         }
     }
 
@@ -88,7 +96,7 @@ public class Fridge extends ElectricalAppliance {
             if (this.maxPowerConsumption != 0) // если уже установлена мощность - определяем соответствие классу потребляемой мощности
             {
                 if (!className.checkPowerConsumptionByClass(this.maxPowerConsumption)) {
-                    throw new LogicalException("power consumption class does not suit max power consumption");
+                    throw new LogicalException("power consumption class " + consumptionClass + " does not suit max power consumption = " + this.maxPowerConsumption);
                 }
             }
             this.consumptionClass = consumptionClass;
@@ -106,7 +114,7 @@ public class Fridge extends ElectricalAppliance {
             if (this.consumptionClass != null) {
                 PowerConsumptionClass className = PowerConsumptionClass.valueOf(this.consumptionClass.toUpperCase());
                 if (!className.checkPowerConsumptionByClass(maxPowerConsumption)) {
-                    throw new LogicalException("max power consumption = " + maxPowerConsumption + " does not suit power consumption class" + this.consumptionClass);
+                    throw new LogicalException("max power consumption = " + maxPowerConsumption + " does not suit power consumption class " + this.consumptionClass);
                 }
             }
             this.maxPowerConsumption = maxPowerConsumption;

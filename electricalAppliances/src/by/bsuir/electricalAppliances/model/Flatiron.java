@@ -63,7 +63,7 @@ public class Flatiron extends ElectricalAppliance {
 
     @Override
     public String toString() {
-        return super.toString() + " Soleplate = " + soleplate + "\n";
+        return super.toString() + " soleplate = " + soleplate + "\n";
     }
 
 

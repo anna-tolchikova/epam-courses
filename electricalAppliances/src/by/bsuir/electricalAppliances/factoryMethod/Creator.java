@@ -1,4 +1,4 @@
-package by.bsuir.electricalappliances.factoryMethod;
+package by.bsuir.electricalappliances.factorymethod;
 
 import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 

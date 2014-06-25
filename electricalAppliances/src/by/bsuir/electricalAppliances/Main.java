@@ -2,16 +2,16 @@ package by.bsuir.electricalappliances;
 
 import by.bsuir.electricalappliances.builder.Director;
 import by.bsuir.electricalappliances.builder.ConcreteBuilder;
-import by.bsuir.electricalappliances.exceptions.LogicalException;
 import by.bsuir.electricalappliances.exceptions.TechnicalException;
-import by.bsuir.electricalappliances.factoryMethod.Creator;
-import by.bsuir.electricalappliances.factoryMethod.FlatironCreator;
-import by.bsuir.electricalappliances.factoryMethod.FridgeCreator;
+import by.bsuir.electricalappliances.factorymethod.Creator;
+import by.bsuir.electricalappliances.factorymethod.FlatironCreator;
+import by.bsuir.electricalappliances.factorymethod.FridgeCreator;
 import by.bsuir.electricalappliances.model.Flat;
 import by.bsuir.electricalappliances.model.Fridge;
 import by.bsuir.electricalappliances.modelAbstractions.ElectricalAppliance;
 import java.util.logging.Logger;
 import by.bsuir.electricalappliances.modelLogic.FlatLogic;
+import by.bsuir.electricalappliances.modelLogic.FlatSearch;
 import by.bsuir.electricalappliances.modelLogic.FlatSorting;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -58,24 +58,58 @@ public class Main {
 
         Flat flat = director.getFlat();
 
+        // sorting
         FlatSorting flatSorting = new FlatSorting();
         log.info("Flat before sorting :\n" + flat);
-        flatSorting.sortAppliancesByPowerASC(flat);
-        log.info("Flat after sorting :\n" + flat);
+        flatSorting.sortAppliancesByMaxPower(flat);
+        log.info("Flat after sorting by max power consumption:\n" + flat);
 
+        // calculate total power of working appliances
         FlatLogic flatLogic = new FlatLogic();
         log.info("Total power in flat (default) = " + flatLogic.calculateTotalPower(flat));
         flatLogic.switchOnFlatiron(flat);
-        log.info("Total power in flat (with working flatiron) = " + flatLogic.calculateTotalPower(flat));
+        flatLogic.switchOnFridge(flat);
+        log.info("Total power in flat (with working flatiron and fridge) = " + flatLogic.calculateTotalPower(flat));
 
-        //demonstration of incorrect parameters by creating Fridge objects
+        // sorting by current power consumption
+        flatSorting.sortAppliancesByCurrentPower(flat);
+        log.info("Flat after sorting by current power consumption:\n" + flat);
+
+        //search  by max consumption
+        FlatSearch flatSearch = new FlatSearch();
+        try {
+            log.info(" electrical appliances in range of power consumption from 1700 to 2000 :\n" + flatSearch.findAppliancesByMaxPowerConsumpitonRange(flat, 1700, 2000));
+        } catch (TechnicalException ex) {
+           log.log(Level.SEVERE, ex.getMessage());
+        }
+
+
+        //demonstration of incorrect class parameter by creating Fridge object
         try {
                 Fridge fridge = (Fridge) fridgeCreator.factoryMethod(); //???????
                 fridge.setMaxPowerConsumption(1000); // class D
-                fridge.setConsumptionClass("B");
+                fridge.setConsumptionClass("A");
         } catch (TechnicalException ex) {
             log.log(Level.SEVERE, ex.getMessage());
         }
+
+        //demonstration of incorrect max power consumption parameter by creating Fridge object
+        try {
+                Fridge fridge = (Fridge) fridgeCreator.factoryMethod(); //???????
+                fridge.setConsumptionClass("A"); // <=550
+                fridge.setMaxPowerConsumption(1000); 
+        } catch (TechnicalException ex) {
+            log.log(Level.SEVERE, ex.getMessage());
+        }
+
+        //demonstration  of incorrect range by search
+        try {
+            log.info(" electrical appliances in range of current power consumption from 2000 to 1700 :\n" + flatSearch.findAppliancesByCurrentPowerConsumpitonRange(flat, 2000, 1700));
+        } catch (TechnicalException ex) {
+           log.log(Level.SEVERE, ex.getMessage());
+        }
+
+
 
     }
 }
