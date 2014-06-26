@@ -21,8 +21,11 @@ public class FlatSearch {
     }
 
     public Flat findAppliancesByProducer(Flat flat, String producer) {
-        Iterator<ElectricalAppliance> iter = flat.getElectricalAppliances().iterator();
         Flat result = new Flat();
+        if ( producer == null) {
+            return result;
+        }
+        Iterator<ElectricalAppliance> iter = flat.getElectricalAppliances().iterator();        
         while (iter.hasNext()) {
             ElectricalAppliance item = iter.next();
             if (item.getProducer().equals(producer)) {
@@ -32,7 +35,10 @@ public class FlatSearch {
         return result;
     }
 
-    public Flat findAppliancesByMaxPowerConsumpiton(Flat flat, int maxPowerConsumpiton) {
+    public Flat findAppliancesByMaxPowerConsumpiton(Flat flat, int maxPowerConsumpiton) throws TechnicalException {
+        if (maxPowerConsumpiton < 0) {
+            throw new TechnicalException(" incorrect parameter \'maxPowerConsumpiton\' ");
+        }
         Iterator<ElectricalAppliance> iter = flat.getElectricalAppliances().iterator();
         Flat result = new Flat();
         while (iter.hasNext()) {
@@ -47,30 +53,25 @@ public class FlatSearch {
     public Flat findAppliancesByMaxPowerConsumpitonRange(Flat flat, int from, int to) throws TechnicalException {
 
         Flat result = new Flat();
-        try {
-            if (from < 0 || to < 0 || to < from) {
-                throw new IllegalArgumentException();
-            }
-            Iterator<ElectricalAppliance> iter = flat.getElectricalAppliances().iterator();
-            while (iter.hasNext()) {
-                ElectricalAppliance item = iter.next();
-                int maxPowerConsumpiton = item.getMaxPowerConsumption();
-                if (maxPowerConsumpiton >= from && maxPowerConsumpiton <= to) {
-                    result.addElectricalAppliance(item);
-                }
-            }
-        } catch (IllegalArgumentException ex) {
+        if (from < 0 || to < 0 || to < from) {
             throw new TechnicalException(" incorrect parameters from\\to ");
+        }
+        Iterator<ElectricalAppliance> iter = flat.getElectricalAppliances().iterator();
+        while (iter.hasNext()) {
+            ElectricalAppliance item = iter.next();
+            int maxPowerConsumpiton = item.getMaxPowerConsumption();
+            if (maxPowerConsumpiton >= from && maxPowerConsumpiton <= to) {
+                result.addElectricalAppliance(item);
+            }
         }
         return result;
     }
 
-     public Flat findAppliancesByCurrentPowerConsumpitonRange(Flat flat, int from, int to) throws TechnicalException {
+    public Flat findAppliancesByCurrentPowerConsumpitonRange(Flat flat, int from, int to) throws TechnicalException {
 
         Flat result = new Flat();
-        try {
             if (from < 0 || to < 0 || to < from) {
-                throw new IllegalArgumentException();
+                throw new TechnicalException(" incorrect parameters from\\to ");
             }
             Iterator<ElectricalAppliance> iter = flat.getElectricalAppliances().iterator();
             while (iter.hasNext()) {
@@ -80,9 +81,6 @@ public class FlatSearch {
                     result.addElectricalAppliance(item);
                 }
             }
-        } catch (IllegalArgumentException ex) {
-            throw new TechnicalException(" incorrect parameters from\\to ");
-        }
         return result;
     }
 }

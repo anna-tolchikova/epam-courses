@@ -50,6 +50,9 @@ class SortedByPowerDESC implements Comparator<ElectricalAppliance> {
 class SortedByCurrentPower implements Comparator<ElectricalAppliance> {
 
     public int compare(ElectricalAppliance o1, ElectricalAppliance o2) {
+        if (o1.isSwitchedOn() && !o2.isSwitchedOn()) {
+            return 1;
+        }
         int result =  o1.getCurrentPowerConsumption() - o2.getCurrentPowerConsumption();
         if (result != 0) {
             return (int) result / Math.abs(result);
@@ -60,6 +63,9 @@ class SortedByCurrentPower implements Comparator<ElectricalAppliance> {
 
 class SortedByCurrentPowerDESC implements Comparator<ElectricalAppliance> {
     public int compare(ElectricalAppliance o1, ElectricalAppliance o2) {
+        if (o1.isSwitchedOn() && !o2.isSwitchedOn()) {
+            return -1;
+        }
         int result =  o2.getCurrentPowerConsumption() - o1.getCurrentPowerConsumption();
         if (result != 0) {
             return (int) result / Math.abs(result);

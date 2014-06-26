@@ -29,3 +29,296 @@
  isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
 
 09:26:06,664 ERROR Main:  incorrect parameters from\to 
+09:30:29,029  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+
+09:30:29,035  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:30:29,045  INFO Main: Total power in flat (default) = 0
+09:30:29,046  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+09:30:29,048  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+
+09:30:29,053  INFO Main:  electrical appliances in range of power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:30:29,086 ERROR Main:  incorrect parameters from\to 
+09:46:05,365  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+
+09:46:05,369  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:46:05,374  INFO Main: Total power in flat (default) = 0
+09:46:05,374  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+09:46:05,376  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+
+09:46:05,379  INFO Main:  electrical appliances in range of power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:46:05,402 ERROR Main:  incorrect parameters from\to 
+09:49:23,520  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+
+09:49:23,523  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:49:23,528  INFO Main: Total power in flat (default) = 0
+09:49:23,528  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+09:49:23,530  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+
+09:49:23,533  INFO Main:  electrical appliances in range of power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:49:23,534 ERROR Main:  - there is no such power consumption class 
+09:49:23,536 ERROR Fridge: max power consumption = 1000 does not suit power consumption class A
+09:49:23,536 ERROR Main:  incorrect parameters from\to 
+09:51:01,584  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+
+09:51:01,594  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:51:01,614  INFO Main: Total power in flat (default) = 0
+09:51:01,615  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+09:51:01,617  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+
+09:51:01,622  INFO Main:  electrical appliances in range of power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:51:01,626 ERROR Fridge: power consumption class 'A' does not suit max power consumption = 1000
+09:51:01,626 ERROR Fridge: max power consumption = 1000 does not suit power consumption class 'A'
+09:51:01,627 ERROR Main:  incorrect parameters from\to 
+09:54:43,582  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+
+09:54:43,585  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:54:43,589  INFO Main: Total power in flat (default) = 0
+09:54:43,589  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+09:54:43,590  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+
+09:54:43,594  INFO Main:  electrical appliances in range of power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:54:43,596 ERROR Fridge: power consumption class 'A' does not suit max power consumption = 1000
+09:54:43,596 ERROR Fridge: max power consumption = 1000 does not suit power consumption class 'A'
+09:54:43,596 ERROR Main:  incorrect parameters from\to 
+09:55:54,501  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+
+09:55:54,508  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:55:54,513  INFO Main: Total power in flat (default) = 0
+09:55:54,513  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+09:55:54,515  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+
+09:55:54,522  INFO Main:  electrical appliances in range of power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:55:54,528 ERROR Fridge: power consumption class 'A' does not suit max power consumption = 1000
+09:55:54,529 ERROR Fridge: max power consumption = 1000 does not suit power consumption class 'A'
+09:55:54,530 ERROR Main:  incorrect parameters from\to 
+09:57:53,062  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+
+09:57:53,065  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:57:53,071  INFO Main: Total power in flat (default) = 0
+09:57:53,071  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+09:57:53,072  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:57:53,074  INFO Main:  electrical appliances in range of max power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:57:53,077 ERROR Fridge: power consumption class 'A' does not suit max power consumption = 1000
+09:57:53,077 ERROR Fridge: max power consumption = 1000 does not suit power consumption class 'A'
+09:57:53,078 ERROR Main:  incorrect parameters from\to 
+10:01:36,457  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+
+10:01:36,465  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+10:01:36,474  INFO Main: Total power in flat (default) = 0
+10:01:36,475  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+10:01:36,477  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+10:01:36,484  INFO Main:  electrical appliances in range of max power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+10:01:36,490 ERROR Fridge: power consumption class 'A' does not suit max power consumption = 1000
+10:01:36,491 ERROR Fridge: max power consumption = 1000 does not suit power consumption class 'A'
+10:01:36,492 ERROR Main:  incorrect parameters from\to 
+10:02:02,296  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+
+10:02:02,299  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+10:02:02,304  INFO Main: Total power in flat (default) = 0
+10:02:02,304  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+10:02:02,305  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null consumptionClass = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+
+10:02:02,307  INFO Main:  electrical appliances in range of max power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+10:02:02,310 ERROR Fridge: power consumption class 'A' does not suit max power consumption = 1000
+10:02:02,310 ERROR Fridge: max power consumption = 1000 does not suit power consumption class 'A'
+10:02:02,310 ERROR Main:  incorrect parameters from\to 

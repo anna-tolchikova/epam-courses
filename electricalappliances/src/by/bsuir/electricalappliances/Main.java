@@ -79,7 +79,7 @@ public class Main {
         //search  by max consumption
         FlatSearch flatSearch = new FlatSearch();
         try {
-            log.info(" electrical appliances in range of power consumption from 1700 to 2000 :\n" + flatSearch.findAppliancesByMaxPowerConsumpitonRange(flat, 1700, 2000));
+            log.info(" electrical appliances in range of max power consumption from 1700 to 2000 :\n" + flatSearch.findAppliancesByMaxPowerConsumpitonRange(flat, 1700, 2000));
         } catch (TechnicalException ex) {
            log.error(ex.getMessage());
         }
