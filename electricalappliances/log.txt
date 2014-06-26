@@ -1,7 +1,31 @@
-aa INFO by.bsuir.electricalappliances.model.Fridge: A A
-aa INFO by.bsuir.electricalappliances.model.Fridge: A
-aa INFO by.bsuir.electricalappliances.model.Fridge: 
-12:41:03,520  INFO Fridge: 
-12:41:35,736  INFO Fridge: A
-12:46:45,719  INFO Fridge: B
-12:47:14,899  INFO Fridge: B
+09:26:06,604  INFO Main: Flat before sorting :
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+
+09:26:06,612  INFO Main: Flat after sorting by max power consumption:
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1600 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:26:06,617  INFO Main: Total power in flat (default) = 0
+09:26:06,619  INFO Main: Total power in flat (with working flatiron and fridge) = 1600
+09:26:06,621  INFO Main: Flat after sorting by current power consumption:
+ isSwitchedOn = true maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 0 producer = null ConsumptionClass = null
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+ isSwitchedOn = true maxPowerConsumption = 1600 producer = null soleplate = null
+
+09:26:06,629  INFO Main:  electrical appliances in range of power consumption from 1700 to 2000 :
+ isSwitchedOn = false maxPowerConsumption = 1800 producer = null soleplate = null
+ isSwitchedOn = false maxPowerConsumption = 2000 producer = null soleplate = null
+
+09:26:06,664 ERROR Main:  incorrect parameters from\to 
