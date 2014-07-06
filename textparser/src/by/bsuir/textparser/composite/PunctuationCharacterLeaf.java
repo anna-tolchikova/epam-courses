@@ -1,6 +1,9 @@
-package by.bsuir.textparser.compositor;
+package by.bsuir.textparser.composite;
 
 import org.apache.log4j.Logger;
+
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class PunctuationCharacterLeaf  implements Component {
 
@@ -20,8 +23,18 @@ public class PunctuationCharacterLeaf  implements Component {
         this.character = character;
     }
 
-    public void print() {
-        log.info(this);
+    @Override
+    public void writeToFile(FileWriter fw) {
+        try {
+            fw.write(this.character);
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
+    }
+
+    @Override
+    public String toString () {
+        return  String.valueOf(character);
     }
 
 }
