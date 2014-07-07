@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema>
+
+    <simpleType name="power-consumption-class">
+        <restriction base="string" length="1">
+            <pattern value="[a-gA-G]"/>
+        </restriction>
+    </simpleType>
+
+    <element name="appliances">
+        <complexType>
+            <sequence>
+                <element name="flatirons" type="tns:flatirons" minOccurs="1" maxOccurs="1" />
+                <element name="fridges" type="tns:fridges" minOccurs="1" maxOccurs="1" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="flatirons">
+        <sequence>
+            <element name="flatiron" type="tns:flatiron" minOccurs="1" maxOccurs="unbounded" />
+        </sequence>
+    </complexType>
+
+    <complexType name="fridges">
+        <sequence>
+            <element name="fridge" type="tns:fridge" minOccurs="1" maxOccurs="unbounded" />
+        </sequence>
+    </complexType>
+
+    <complexType name="flatiron">
+        <sequence>
+            <element name="soleplate" type="string"/>
+            <element name="power" type="decimal"/>
+            <element name="water-volume" type="decimal"/>
+            <element name="speed-steam" type="decimal"/>
+        </sequence>
+        <attribute name="id" type="ID"
+                   use="required"/>
+        <attribute name="producer" type="string"
+                   use="required"/>
+        <attribute name="model" type="string"
+                   use="required"/>
+    </complexType>
+
+    <complexType name="flatiron">
+        <sequence>
+            <element name="power-consumption-class" type="tns:power-consumption-class"/>
+            <element name="volume" type="decimal"/>
+        </sequence>
+        <attribute name="id" type="ID"
+                   use="required"/>
+        <attribute name="producer" type="string"
+                   use="required"/>
+        <attribute name="model" type="string"
+                   use="required"/>
+    </complexType>
+
+
+</schema>
