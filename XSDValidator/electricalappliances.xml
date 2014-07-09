@@ -1,53 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<appliances>
+<tns:electricalappliances xmlns:tns="http://www.example.com/electricalappliances"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xsi:schemaLocation="http://www.example.com/electricalappliances electricalappliances.xsd">
+
     <flatirons>
 
-        <flatiron id="1" producer="Maxwell" model="MW-3004">
+        <flatiron id="id1" producer="Maxwell" model="MW-3004">
            <soleplate>антипригарное покрытие</soleplate>
-           <power>1750<power>
+           <power>1750</power>
            <water-volume>200</water-volume>
-           <speed-steam></speed-steam>
         </flatiron>
 
-        <flatiron id="2" producer="Braun" model="TexStyle 535">
+        <flatiron id="id2" producer="Braun" model="TexStyle 535">
            <soleplate>алюминий  (окисленный электролитом)</soleplate>
            <power>2000</power>
            <water-volume>300</water-volume>
-           <speed-steam>40</speed-steam> <!-- необязательное поле-->
         </flatiron>
 
-        <flatiron id="3" producer="Philips" model="GC2965/80">
+        <flatiron id="id3" producer="Philips" model="GC2965/80">
            <soleplate>нержавеющая сталь  (SteamGlide)</soleplate>
            <power>2400</power>
            <water-volume>300</water-volume>
-           <speed-steam>40</speed-steam>
         </flatiron>
 
     </flatirons>
 
     <fridges>
 
-        <fridge  id="4" producer="LG" model="GA-B379SLQA">
+        <fridge  id="id4" producer="LG" model="GA-B379SLQA">
+            <power>500</power>
             <power-consumption-class>A</power-consumption-class>
             <volume>360</volume>
         </fridge>
 
-        <fridge  id="5" producer="LG"  model="GA-B489YLQA">
+        <fridge  id="id5" producer="LG"  model="GA-B489YLQA">
+            <power>500</power>
             <power-consumption-class>A</power-consumption-class>
             <volume>350</volume>
         </fridge>
 
-        <fridge  id="6" producer="BOSH"  model="KGN39VI11R">
+        <fridge  id="id6" producer="BOSH"  model="KGN39VI11R">
+            <power>600</power>
             <power-consumption-class>B</power-consumption-class>
             <volume>400</volume>
         </fridge>
 
-        <fridge  id="7" producer="Atlant"  model="ХМ 4008-022">
+        <fridge  id="id7" producer="Atlant"  model="ХМ 4008-022">
+            <power>500</power>
             <power-consumption-class>A</power-consumption-class>
             <volume>450</volume>
         </fridge>
 
     </fridges>
 
-</appliances>
+</tns:electricalappliances>
