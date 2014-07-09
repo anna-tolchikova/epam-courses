@@ -25,6 +25,10 @@ public class CompositeTextPart implements Component {
         childParts.remove(part);
     }
 
+    public void clear() {
+        childParts.clear();
+    }
+
     @Override
     public void writeToFile(FileWriter fw) {
         for (Component part : childParts) {

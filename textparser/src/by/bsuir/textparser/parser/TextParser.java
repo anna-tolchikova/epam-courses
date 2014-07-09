@@ -1,7 +1,7 @@
 package by.bsuir.textparser.parser;
 
 import by.bsuir.textparser.composite.*;
-import by.bsuir.textparser.exceptions.LogicalException;
+import by.bsuir.textparser.exceptions.TechnicalException;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -21,9 +21,8 @@ public class TextParser {
     static Properties prop = new Properties();
 
     static {
-        new DOMConfigurator().doConfigure("textparser/log4j.xml", LogManager.getLoggerRepository());
         try {
-            prop.load(new InputStreamReader(new FileInputStream("textparser" + File.separatorChar + "src" + File.separatorChar + "patterns.properties"),"UTF-8"));
+            prop.load(new InputStreamReader(new FileInputStream("src" + File.separatorChar + "patterns.properties"),"UTF-8"));
         } catch (IOException e) {
             log.error(e.getMessage());
         }
@@ -57,11 +56,11 @@ public class TextParser {
         return compositeText;
     }
 
-    public void parse (String text) throws LogicalException {
+    public void parse (String text) throws TechnicalException {
         Matcher matcher = textPattern.matcher(text);
         while(matcher.find()) {
             if (matcher.group(1) != null && matcher.group(2) != null){
-                 throw new LogicalException("Invalid block: "+matcher.group());
+                 throw new TechnicalException("Invalid block during parsing in paragraphs: "+matcher.group());
             }
             else if (matcher.group(1) != null) {
                   compositeText.add(parseParagraph(matcher.group(1)));
@@ -71,30 +70,30 @@ public class TextParser {
                 compositeText.add(codePart);
             }
             else{
-                throw new LogicalException("Invalid block: "+matcher.group());
+                throw new TechnicalException("Invalid block during parsing in paragraphs: " + matcher.group());
             }
         }
     }
 
 
-    public CompositeTextPart parseParagraph(String paragraph) throws LogicalException { // parse paragraph into sentences
+    public CompositeTextPart parseParagraph(String paragraph) throws TechnicalException { // parse paragraph into sentences
         CompositeTextPart compositeParagraph = new CompositeTextPart();
         Matcher matcher = paragraphPattern.matcher(paragraph);
         while (matcher.find()) {
             if (matcher.group() != null) {
                 compositeParagraph.add(this.parseSentence(matcher.group()));
             }
-            else throw new LogicalException("Invalid block: "+matcher.group());
+            else throw new TechnicalException("Invalid block during parsing in sentences: "+matcher.group());
          }
         return compositeParagraph;
     }
 
-    public CompositeTextPart parseSentence(String sentence) throws LogicalException { // parse sentences into words and punctuation
+    public CompositeTextPart parseSentence(String sentence) throws TechnicalException { // parse sentences into words and punctuation
         CompositeTextPart compositeSentence = new CompositeTextPart();
         Matcher matcher = sentencePattern.matcher(sentence);
         while (matcher.find()) {
             if (matcher.group(1) != null && matcher.group(2) != null){
-                throw new LogicalException("Invalid block: "+matcher.group());
+                throw new TechnicalException("Invalid block during parsing in words: "+matcher.group());
             }
             else if (matcher.group(1) != null) {
                 WordLeaf word =  new WordLeaf(matcher.group(1));
@@ -107,7 +106,7 @@ public class TextParser {
                 compositeSentence.add(character);
             }
             else{
-                throw new LogicalException("Invalid block: "+matcher.group());
+                throw new TechnicalException("Invalid block during parsing in words: "+matcher.group());
             }
         }
         return compositeSentence;
@@ -124,7 +123,7 @@ public class TextParser {
                 textPart.writeToFile(fw);
                 fw.write("\n");
             }
-        } catch (LogicalException | IOException e) {
+        } catch (TechnicalException | IOException e) {
             log.error(e.getMessage());
 
         } finally {

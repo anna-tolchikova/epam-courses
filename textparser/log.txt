@@ -1,0 +1,46 @@
+23:52:25,851 ERROR TextParser: textparser\src\patterns.properties (Системе не удается найти указанный путь)
+01:48:40,997 ERROR TextParser: textparser\src\patterns.properties (Системе не удается найти указанный путь)
+01:51:48,131 ERROR TextParser: textparser\src\patterns.properties (Системе не удается найти указанный путь)
+08:49:39,077 ERROR TextParser: textparser\src\patterns.properties (Системе не удается найти указанный путь)
+08:51:06,173  INFO Main: Start parsing
+08:51:06,316  INFO Main: Finish parsing
+08:51:06,317  INFO TextProcessing: cutMaxSubstring:
+08:51:06,318  INFO TextProcessing: before ***  The if- then statCLement is the& most basic of all the coCLntrol flow statemenCLts.
+08:51:06,319  INFO TextProcessing: after ***  The if- then statts.
+08:51:06,319  INFO TextProcessing: before ***  One possiCLble implementation of the applyCLBrakes method could be as folCLlows:
+08:51:06,319  INFO TextProcessing: after ***  One possilows:
+08:51:06,327  INFO Main: Count of cutted sententence parts: 2
+10:11:19,861  INFO Main: Start parsing
+10:11:19,921  INFO Main: Finish parsing
+10:11:19,923  INFO TextProcessing: cutMaxSubstring:
+10:11:19,923  INFO TextProcessing: before ***  The if- then statCLement is the& most basic of all the coCLntrol flow statemenCLts.
+10:11:19,925  INFO TextProcessing: after ***  The if- then statts.
+10:11:19,925  INFO TextProcessing: before ***  For exaCLmple, the Bicycle class could allow the brakes to decrease the bicycle' s speed only if the bicycle is already in motion.
+10:11:19,932  INFO TextProcessing: after ***  For exaCLmple, the Bicycle class could allow the brakes to decrease the bicycle' s speed only if the bicycle is already in motion.
+10:11:19,932  INFO TextProcessing: before ***  One possiCLble implementation of the applyCLBrakes method could be as folCLlows:
+10:11:19,933  INFO TextProcessing: after ***  One possilows:
+10:11:19,934  INFO Main: Count of cutted sententence parts: 3
+10:13:58,730  INFO Main: Start parsing
+10:13:58,769  INFO Main: Finish parsing
+10:13:58,771  INFO TextProcessing: cutMaxSubstring:
+10:13:58,778  INFO Main: Count of cutted sententence parts: 0
+10:17:02,517  INFO Main: Start parsing
+10:17:02,564  INFO Main: Finish parsing
+10:17:02,567  INFO TextProcessing: cutMaxSubstring:
+10:17:02,576  INFO Main: Count of cutted sententence parts: 0
+10:20:48,209  INFO Main: Start parsing
+10:20:48,248  INFO Main: Finish parsing
+10:20:48,249  INFO TextProcessing: cutMaxSubstring:
+10:20:48,261  INFO Main: Count of cutted sententence parts: 0
+10:23:29,915  INFO Main: Start parsing
+10:23:29,954  INFO Main: Finish parsing
+10:23:29,956  INFO TextProcessing: cutMaxSubstring:
+10:23:29,964  INFO Main: Count of cutted sententence parts: 0
+10:39:33,931  INFO Main: Start parsing
+10:39:33,996  INFO Main: Finish parsing
+10:39:33,998  INFO TextProcessing: cutMaxSubstring:
+10:39:33,999  INFO TextProcessing: before ***  The if- then statCLement is the& most basic of all the coCLntrol flow statemenCLts.
+10:39:34,001  INFO TextProcessing: after ***  The if- then statts.
+10:39:34,002  INFO TextProcessing: before ***  One possiCLble implementation of the applyCLBrakes method could be as folCLlows:
+10:39:34,003  INFO TextProcessing: after ***  One possilows:
+10:39:34,015  INFO Main: Count of cutted sententence parts: 2

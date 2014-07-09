@@ -13,7 +13,7 @@ public class Main {
     static Logger log = Logger.getLogger(Main.class);
 
     static {
-        new DOMConfigurator().doConfigure("textparser/log4j.xml", LogManager.getLoggerRepository());
+        new DOMConfigurator().doConfigure("log4j.xml", LogManager.getLoggerRepository());
     }
 
     public static void main(String[] args) {
@@ -21,12 +21,12 @@ public class Main {
         // parse text from file and build it again with rewrite into new file
         TextParser parser = new TextParser();
         log.info("Start parsing");
-        parser.parseToFile("textparser" + File.separatorChar + "text.txt", "textparser" + File.separatorChar + "result.txt");
+        parser.parseToFile("text.txt", "result.txt");
         log.info("Finish parsing");
 
         // cut the max substring
         TextProcessing textProcessor = new TextProcessing();
-        log.info("Count of cutted sententence parts: " + textProcessor.cutMaxSubstring(parser.getCompositeText(), "CL", "CL"));
+        log.info("Count of cut sententence parts: " + textProcessor.cutMaxSubstring(parser.getCompositeText(), "CL", "CL"));
 
     }
 
