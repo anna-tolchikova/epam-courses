@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<electricalappliances>
+
+    <flatirons>
+        <flatiron id="id1" producer="Maxwell" model="MW-3004">
+            <soleplate>антипригарное покрытие</soleplate>
+            <power>1750</power>
+            <water-volume>200</water-volume>
+        </flatiron>
+        <flatiron id="id2" producer="Braun" model="TexStyle 535">
+            <soleplate>алюминий (окисленный электролитом)</soleplate>
+            <power>2000</power>
+            <water-volume>300</water-volume>
+        </flatiron>
+        <flatiron id="id3" producer="Philips" model="GC2965/80">
+            <soleplate>нержавеющая сталь (SteamGlide)</soleplate>
+            <power>2400</power>
+            <water-volume>300</water-volume>
+        </flatiron>
+    </flatirons>
+    <fridges>
+        <fridge id="id4" producer="LG" model="GA-B379SLQA">
+            <power>500</power>
+            <power-consumption-class>A</power-consumption-class>
+            <volume>360</volume>
+        </fridge>
+        <fridge id="id5" producer="LG" model="GA-B489YLQA">
+            <power>500</power>
+            <power-consumption-class>A</power-consumption-class>
+            <volume>350</volume>
+        </fridge>
+        <fridge id="id6" producer="BOSH" model="KGN39VI11R">
+            <power>600</power>
+            <power-consumption-class>B</power-consumption-class>
+            <volume>400</volume>
+        </fridge>
+        <fridge id="id7" producer="Atlant" model="ХМ 4008-022">
+            <power>500</power>
+            <power-consumption-class>A</power-consumption-class>
+            <volume>450</volume>
+        </fridge>
+    </fridges>
+</electricalappliances>

@@ -1,0 +1,46 @@
+
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core" >
+    <jsp:directive.page contentType="text/html;charset=UTF-8" language="java" />
+    <html>
+    <head>
+        <title>Выбор парсера для отображения</title>
+
+        <script type="text/javascript">
+            function setHiddenDOM(){
+                document.all.command.value="PARSEDOM";
+            }
+            function setHiddenSAX(){
+                document.all.command.value="PARSESAX";
+            }
+            function setHiddenStAX(){
+                document.all.command.value="PARSESTAX";
+            }
+        </script>
+
+    </head>
+    <body>
+    <form name="parsersChoice" method="post" action="ParsersServlet">
+        <input type="submit" name="parseDOM" value="parseDOM" onclick="setHiddenDOM()"/>
+        <input type="submit" name="parseSAX" value="parseSAX" onclick="setHiddenSAX()"/>
+        <input type="submit" name="parseStAX" value="parseStAX" onclick="setHiddenStAX()"/>
+        <input type="hidden" name="command"/>
+    </form>
+
+    <c:if test="${not empty wrongParserType}">
+        ${wrongParserType}
+    </c:if>
+
+    <c:if test="${not empty electricalAppliances}">
+        <table>
+        <c:forEach var="elem" items="${electricalAppliances}" varStatus="status">
+            <tr>
+                <td><c:out value="${ status.count }" /></td>
+                <td><c:out value="${ elem }" /></td>
+            </tr>
+        </c:forEach>
+        </table>
+    </c:if>
+
+    </body>
+    </html>
+</jsp:root>
