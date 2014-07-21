@@ -1,0 +1,51 @@
+12:24:56,969 ERROR Main: глобальная SAX ошибка The prefix "tns" for element "tns:appliances" is not bound.
+12:24:56,970  INFO Main: проверка electricalappliances.xml завершена
+12:31:11,392 ERROR Main: глобальная SAX ошибка The prefix "tns" for element "tns:appliances" is not bound.
+12:31:11,394  INFO Main: проверка electricalappliances.xml завершена
+13:04:06,183 ERROR Main: глобальная SAX ошибка The prefix "tns" for element "tns:electricalappliances" is not bound.
+13:04:06,184  INFO Main: проверка electricalappliances.xml завершена
+13:06:49,934 ERROR Main: глобальная SAX ошибка The prefix "tns" for element "tns:electricalappliances" is not bound.
+13:06:49,935  INFO Main: проверка electricalappliances.xml завершена
+14:03:27,342  INFO Main: проверка electricalappliances.xml завершена
+14:03:57,891  INFO Main: проверка electricalappliances.xml завершена
+14:06:06,653 ERROR Main: глобальная SAX ошибка Open quote is expected for attribute "{1}" associated with an  element type  "id".
+14:06:06,654  INFO Main: проверка electricalappliances.xml завершена
+14:06:33,241  INFO Main: проверка electricalappliances.xml завершена
+14:11:01,017  INFO Main: проверка electricalappliances.xml завершена
+14:11:42,863  INFO Main: проверка electricalappliances.xml завершена
+14:13:51,439  INFO Main: проверка electricalappliances.xml завершена
+14:19:49,198  INFO Main: проверка electricalappliances.xml завершена
+14:41:38,686 ERROR Main: ошибка I/O потока no protocol: src" + File.separatorChar + "electricalappliances.xml"
+14:41:38,687  INFO Main: проверка src" + File.separatorChar + "electricalappliances.xml" завершена
+14:42:15,555 ERROR Main: ошибка I/O потока no protocol: "src" + File.separatorChar + "electricalappliances.xml"
+14:42:15,556  INFO Main: проверка "src" + File.separatorChar + "electricalappliances.xml" завершена
+14:42:45,354 ERROR Main: ошибка I/O потока no protocol: "src" + File.separatorChar + "resources" + + File.separatorChar + "electricalappliances.xml"
+14:42:45,355  INFO Main: проверка "src" + File.separatorChar + "resources" + + File.separatorChar + "electricalappliances.xml" завершена
+14:43:52,018  INFO Main: "src" + File.separatorChar + "resources" + + File.separatorChar + "electricalappliances.xml"
+14:43:52,023 ERROR Main: ошибка I/O потока no protocol: "src" + File.separatorChar + "resources" + + File.separatorChar + "electricalappliances.xml"
+14:43:52,023  INFO Main: проверка "src" + File.separatorChar + "resources" + + File.separatorChar + "electricalappliances.xml" завершена
+14:44:10,731  INFO Main: "src" + File.separatorChar + "resources" + File.separatorChar + "electricalappliances.xml"
+14:44:10,736 ERROR Main: ошибка I/O потока no protocol: "src" + File.separatorChar + "resources" + File.separatorChar + "electricalappliances.xml"
+14:44:10,736  INFO Main: проверка "src" + File.separatorChar + "resources" + File.separatorChar + "electricalappliances.xml" завершена
+14:46:42,189  INFO Main: src\resources\electricalappliances.xml
+14:46:42,197 ERROR Main: ошибка I/O потока D:\Мои документы\!EPAM\xsdValidator\src\resources\electricalappliances.xml (Не удается найти указанный файл)
+14:46:42,197  INFO Main: проверка src\resources\electricalappliances.xml завершена
+14:47:24,423 ERROR Main: ошибка I/O потока D:\Мои документы\!EPAM\xsdValidator\src\electricalappliances.xml (Не удается найти указанный файл)
+14:47:24,425  INFO Main: проверка src\electricalappliances.xml завершена
+14:48:05,571  INFO Main: проверка electricalappliances.xml завершена
+16:55:39,430  INFO Main: проверка electricalappliances.xml завершена
+16:58:03,613  INFO Main: проверка electricalappliances.xml завершена
+16:59:10,073  INFO Main: проверка electricalappliances.xml завершена
+17:01:32,402  INFO Main: проверка electricalappliances.xml завершена
+17:02:53,539  INFO Main: проверка electricalappliances.xml завершена
+17:02:53,551  INFO Main: ../../electricalappliances.xml
+17:03:38,740  INFO Main: проверка electricalappliances.xml завершена
+17:03:38,751  INFO Main: ../../electricalappliances.xml
+17:05:12,358  INFO Main: проверка electricalappliances.xml завершена
+17:05:12,374  INFO Main: ../../../electricalappliances.xml
+17:05:39,177  INFO Main: проверка electricalappliances.xml завершена
+17:05:39,194  INFO Main: ../../../electricalappliances.xml
+17:06:32,903  INFO Main: проверка electricalappliances.xml завершена
+17:06:32,917  INFO Main: ../../../electricalappliances.xml
+17:07:21,003  INFO Main: проверка electricalappliances.xml завершена
+17:07:21,015  INFO Main: ../../../../../electricalappliances.xml

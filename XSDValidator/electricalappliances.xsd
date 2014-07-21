@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema    xmlns="http://www.w3.org/2001/XMLSchema"
+               targetNamespace="http://www.example.com/electricalappliances"
+               xmlns:tns="http://www.example.com/electricalappliances"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+    <element name="electricalappliances">
+        <complexType>
+            <sequence>
+                <element name="flatirons" type="tns:Flatirons" minOccurs="1" maxOccurs="1" />
+                <element name="fridges" type="tns:Fridges" minOccurs="1" maxOccurs="1" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Flatirons">
+        <sequence>
+            <element name="flatiron" type="tns:Flatiron" minOccurs="1" maxOccurs="unbounded" />
+        </sequence>
+    </complexType>
+
+    <complexType name="Fridges">
+        <sequence>
+            <element name="fridge" type="tns:Fridge" minOccurs="1" maxOccurs="unbounded" />
+        </sequence>
+    </complexType>
+
+    <complexType name="Flatiron">
+        <sequence>
+            <element name="soleplate" type="string" minOccurs="1"  maxOccurs="1"/>
+            <element name="power" type="decimal" minOccurs="1"  maxOccurs="1"/>
+            <element name="water-volume" type="decimal" minOccurs="1"  maxOccurs="1"/>
+        </sequence>
+        <attribute name="id" type="xsd:ID"
+                   use="required"/>
+        <attribute name="producer" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="LG"/>
+                    <enumeration value="Maxwell"/>
+                    <enumeration value="Braun"/>
+                    <enumeration value="Philips"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="model" type="string"
+                   use="required"/>
+    </complexType>
+
+
+    <complexType name="Fridge">
+        <sequence>
+            <element name="power" type="decimal"  minOccurs="1"  maxOccurs="1"/>
+            <element name="power-consumption-class" type="tns:Power-consumption-class"  minOccurs="1"  maxOccurs="1"/>
+            <element name="volume" type="decimal"  minOccurs="1"  maxOccurs="1"/>
+        </sequence>
+        <attribute name="id" type="ID"
+                   use="required"/>
+        <attribute name="producer" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="LG"/>
+                    <enumeration value="BOSH"/>
+                    <enumeration value="Atlant"/>
+                    <enumeration value="Minsk"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="model" type="string"
+                   use="required"/>
+    </complexType>
+
+    <simpleType name="Power-consumption-class">
+        <restriction base="string">
+            <pattern value="[a-gA-G]{1}"/>
+        </restriction>
+    </simpleType>
+
+</schema>
